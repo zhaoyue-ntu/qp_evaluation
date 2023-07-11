@@ -237,7 +237,7 @@ def get_tpcds(dat_path):
 def get_stats(dat_path):
     df = pd.DataFrame()
     for i in range(71):
-        tmp_df = pd.read_csv(dat_path + 'trial0/train_plan_chunk{}_run0.csv'.format(i))
+        tmp_df = pd.read_csv(dat_path + 'cost/train_plan_chunk{}_run0.csv'.format(i))
         df = df.append(tmp_df)
     df.reset_index(drop=True, inplace=True)
     df = df.sample(frac=1, random_state=2).reset_index(drop=True)
@@ -256,11 +256,11 @@ def get_stats(dat_path):
     train_costs = costs
     train_js_nodes = js_nodes
     
-    df = pd.read_csv(dat_path+'trial0/test_plan__run0.csv')
+    df = pd.read_csv(dat_path+'cost/test_plan__run0.csv')
     val_roots, val_js_nodes, _ = df2nodes(df)
     val_costs = get_costs(val_js_nodes)
     
-    df = pd.read_csv(dat_path+'trial0/workload_plan_run0.csv')
+    df = pd.read_csv(dat_path+'cost/workload_plan_run0.csv')
     test_roots, test_js_nodes, _ = df2nodes(df)
     test_costs = get_costs(test_js_nodes)
 
