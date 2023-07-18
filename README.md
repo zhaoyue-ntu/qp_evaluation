@@ -1,12 +1,12 @@
 ## Requirements:
 
-python=3.7
-torch 1.11.0
-numpy
-pandas
-dgl
-sklearn
-scipy
+* python=3.7
+* torch 1.11.0
+* numpy
+* pandas
+* dgl
+* sklearn
+* scipy
 
 ## Datasets:
 Download the real-world and synthetic datasets from [data](https://drive.google.com/file/d/1dcg92GU5jgUh9Td3WTmFXylMTZVohT2e/view?usp=sharing).

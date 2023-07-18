@@ -36,6 +36,11 @@ test_costs = dat_dict['test_costs']
 # job_light_roots = dat_dict['job_light_roots']
 # job_light_costs = dat_dict['job_light_costs']
 
+seed = 0
+torch.manual_seed(seed)
+torch.cuda.manual_seed_all(seed)
+torch.backends.cudnn.deterministic = True 
+torch.backends.cudnn.benchmark = False
 
 # Method specific
 from algorithms.avgdl import *
